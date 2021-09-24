@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-drink1 = Drink.create(name: "screwdriver")
-drink2 = Drink.create(name: "irish coffee")
+drink1 = Drink.create(name: "screwdriver", description: "oj and vodka", image_url: "http://www.seriouseats.com/images/2014/11/20141104-cocktail-party-cocktails-roundup-vicky-wasik-3.jpg")
+drink2 = Drink.create(name: "irish coffee", description: "coffee and whiskey", image_url: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-irish-coffee.jpg")
 
 ingredient1 = Ingredient.create(name: "coffee", drink: drink2)
 ingredient2 = Ingredient.create(name: "cream", drink: drink2)
