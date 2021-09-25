@@ -2,7 +2,10 @@ class Api::V1::DrinksController < ApplicationController
 
     def index
         drinks = Drink.all
-        render json: DrinkSerializer.new(drinks)
+        options = {
+            include: [:ingredients]
+        }
+        render json: DrinkSerializer.new(drinks, options)
     end
 
     def new 
@@ -21,6 +24,6 @@ class Api::V1::DrinksController < ApplicationController
     private 
 
     def drink_params
-        params.require(:drink).permit(:name, :description, :image_url, :instructions)
+        params.require(:drink).permit(:name, :description, :image_url, :instructions, ingredients_attributes: [:name])
     end
 end
