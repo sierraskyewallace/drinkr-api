@@ -2,7 +2,7 @@ class Api::V1::DrinksController < ApplicationController
 
     def index
         drinks = Drink.all
-        render json: DrinksSerializer.new(drinks)
+        render json: DrinkSerializer.new(drinks)
     end
 
     def new 
@@ -12,7 +12,7 @@ class Api::V1::DrinksController < ApplicationController
     def create
         drink = Drink.new(drink_params)
         if drink.save!
-            render json: DrinksSerializer.new(drink)
+            render json: DrinkSerializer.new(drink)
         else
             render json: {error: drink.errors.full_messages}, status: 422
         end

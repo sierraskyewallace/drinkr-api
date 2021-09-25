@@ -2,7 +2,7 @@ class Api::V1::IngredientsController < ApplicationController
 
     def index
         ingredients = Ingredient.all
-        render json: IngredientsSerializer.new(ingredients)
+        render json: IngredientSerializer.new(ingredients)
     end
 
     def new 
@@ -12,6 +12,6 @@ class Api::V1::IngredientsController < ApplicationController
     def create
         ## create ingredient if not already in database
         ingredient = Ingredient.find_or_create_by(name: params[:name])
-        render json: IngredientsSerializer.new(ingredient)
+        render json: IngredientSerializer.new(ingredient)
     end
 end
