@@ -2,10 +2,7 @@ class Api::V1::DrinksController < ApplicationController
 
     def index
         drinks = Drink.all
-        options = {
-            include: [:ingredients]
-        }
-        render json: DrinkSerializer.new(drinks, options)
+        render json: DrinkSerializer.new(drinks)
     end
 
     def new 
