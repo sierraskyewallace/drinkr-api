@@ -5,11 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-drink1 = Drink.create(name: "Screwdriver", description: "oj and vodka", instructions: "mix and serve", image_url: "https://kitchenswagger.com/wp-content/uploads/2020/07/mojito-recipe1.jpg")
-drink2 = Drink.create(name: "Mojito", description: "rum and mint", instructions: "mix and serve", image_url: "https://kitchenswagger.com/wp-content/uploads/2020/07/mojito-recipe1.jpg")
-
-ingredient1 = Ingredient.create(name: "Rum", drink: drink2)
-ingredient2 = Ingredient.create(name: "Mint", drink: drink2)
-ingredient3 = Ingredient.create(name: "OJ", drink: drink1)
-ingredient4 = Ingredient.create(name: "Vodka", drink: drink1)
