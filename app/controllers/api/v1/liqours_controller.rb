@@ -10,8 +10,18 @@ class Api::V1::LiqoursController < ApplicationController
     end
 
     def create
-        ## create Liqour if not already in database
-        liqour = Liqour.find_or_create_by(name: params[:name])
+        liqour = Liqour.new(liqour_params)
+        if liqour.save!
+
         render json: LiqourSerializer.new(liqour)
+        else
+            render json: {error: 'Error creating liqour'}
+        end
+    end
+
+    private
+
+    def liqour_params
+        params.require(:liqour).permit(:name, :drink_id)
     end
 end

@@ -1,3 +1,4 @@
 class Liqour < ActiveRecord::Base
-  belongs_to :drink 
+  belongs_to :drink, optional: true
+
 end
