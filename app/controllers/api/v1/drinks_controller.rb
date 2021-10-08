@@ -1,7 +1,9 @@
 class Api::V1::DrinksController < ApplicationController
 
     def index
-        drinks = Drink.all
+
+        # render drinks newest to oldest
+        drinks = Drink.all.order(created_at: :desc)
         render json: DrinkSerializer.new(drinks)
     end
 
