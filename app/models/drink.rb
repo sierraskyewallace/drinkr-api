@@ -1,5 +1,5 @@
 class Drink < ApplicationRecord
-    has_many :liqours
+    belongs_to :liqour
 
-    accepts_nested_attributes_for :liqours, allow_destroy: true
+    accepts_nested_attributes_for :liqour
 end
