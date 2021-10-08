@@ -15,3 +15,8 @@ liqour7 = Liqour.create(name: "Cognac")
 liqour9 = Liqour.create(name: "Beer")
 liqour10 = Liqour.create(name: "Wine")
 liqour11 = Liqour.create(name: "Rum")
+
+
+drink1 = Drink.create(name: "Mojito", image_url:"https://cdn.leitesculinaria.com/wp-content/uploads/2021/06/mexican-mojito.jpg.webp", instructions: "Mix all ingredients in a shaker with ice. Shake well. Strain into a chilled cocktail glass. Garnish with a lime wheel.", ingredients: "Seltzer, lime wheel", liqour_id: liqour1.id)
+drink2 = Drink.create(name: "Screwdriver", instructions: "Mix vodka and orange juice", image_url:"https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18172124/ElectricScrewdriver-main.jpg", ingredients: "Orange juice", liqour_id: liqour1.id)
+drink3 = Drink.create(name: "Irish Coffee", instructions: "Mix coffee and baileys, add whipped cream", ingredients: "Coffee, whipped cream", image_url:"https://thespicetrain.com/wp-content/uploads/2020/06/spiced-irish-coffee-0-500x375.jpg", liqour_id: liqour5.id)
